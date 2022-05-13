@@ -1,24 +1,9 @@
+import { App } from 'vue';
 import { createRouter, createWebHashHistory, RouteRecordRaw } from 'vue-router';
-// import appRouter from './appRouter'
-const routes: Array<RouteRecordRaw> = [
-  {
-    path: '/',
-    name: 'Layout',
-    redirect: '/home',
-    component: () => import('@/layout/Index.vue'),
-    children: [
-      {
-        path: '/home',
-        name: 'HomeIndex',
-        component: () => import('@/views/home/Index.vue'),
-      },
-      {
-        path: '/account',
-        name: 'AccountIndex',
-        component: () => import('@/views/account/Index.vue'),
-      },
-    ],
-  },
+import { homeRoute } from './modules/home';
+
+export const routes: Array<RouteRecordRaw> = [
+  homeRoute,
   {
     path: '/login',
     name: 'LoginIndex',
@@ -30,5 +15,9 @@ const router = createRouter({
   history: createWebHashHistory(),
   routes,
 });
+
+export function setupRouter(app: App) {
+  app.use(router).mount('#app');
+}
 
 export default router;

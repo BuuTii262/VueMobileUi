@@ -1,28 +1,22 @@
 <template>
   <div class="account-index">
-    <Button type="primary" to="/login">退出登录</Button>
+    <van-button type="warning">This is account page</van-button>
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent, reactive, toRefs } from 'vue'
-import { Button } from 'vant'
+import { defineComponent, reactive, toRefs } from 'vue';
 export default defineComponent({
-  name: "AccountIndex",
-  components: { Button },
+  name: 'AccountIndex',
+  components: {},
   setup() {
-    const state = reactive({
-
-    });
+    const state = reactive({});
 
     return {
-      ...toRefs(state)
-    }
-  }
-})
+      ...toRefs(state),
+    };
+  },
+});
 </script>
 
-<style lang="scss">
-.account-index {
-}
-</style>
+<style lang="scss"></style>
