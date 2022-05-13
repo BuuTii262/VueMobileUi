@@ -2,7 +2,7 @@
   <div class="page-tab">
     <router-view />
   </div>
-  <van-tabbar v-model="active" active-color="black" inactive-color="gray">
+  <van-tabbar v-model="active" active-color="red" inactive-color="black">
     <van-tabbar-item
       replace
       :to="route.path"
@@ -19,23 +19,21 @@
 </template>
 
 <script setup lang="ts">
-import { computed } from "vue";
-import { useRoute, useRouter } from "vue-router";
-import { homeRouters } from "../router/modules/home";
+import { computed } from 'vue';
+import { useRoute, useRouter } from 'vue-router';
+import { homeRouters } from '../router/modules/home';
 
-const router = useRouter()
+const router = useRouter();
 const route = useRoute;
 const activeRoute = computed(() => {
-  return router.currentRoute.value.path
-})
+  return router.currentRoute.value.path;
+});
 
 const active = computed(() => {
   return homeRouters.findIndex((item) => {
-    return item.path == activeRoute.value
-  })
-})
+    return item.path == activeRoute.value;
+  });
+});
 </script>
 
-<style lang="scss" scoped>
-
-</style>
+<style lang="scss" scoped></style>

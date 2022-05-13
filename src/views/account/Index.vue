@@ -1,7 +1,5 @@
 <template>
-  <div class="account-index">
   <h1>Account Page</h1>
-  </div>
 </template>
 
 <script lang="ts">
@@ -19,4 +17,8 @@ export default defineComponent({
 });
 </script>
 
-<style lang="scss"></style>
+<style lang="scss" >
+h1{
+  font-size: 12px;
+}
+</style>
