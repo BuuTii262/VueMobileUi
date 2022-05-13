@@ -24,6 +24,6 @@ export default defineComponent({
 
 <style lang="scss">
 .home-index {
-  //font-size: 12px;
+  font-size: 12px;
 }
 </style>

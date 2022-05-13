@@ -3,10 +3,10 @@
     <router-view class="g-content" />
     <Tabbar placeholder v-model="active">
       <TabbarItem icon="home-o" name="HomeIndex" replace to="/home"
-        >首页</TabbarItem
+        >Home</TabbarItem
       >
       <TabbarItem badge="3" name="AccountIndex" replace to="/account">
-        <span>我的</span>
+        <span>Account</span>
         <template #icon="props">
           <img :src="props.active ? icon.active : icon.inactive" />
         </template>
@@ -44,5 +44,6 @@ export default defineComponent({
 
 <style lang="scss">
 //.layout-index {
+// font-size: 12px;
 //}
 </style>
