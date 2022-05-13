@@ -10,3 +10,5 @@ import { setupPlugins } from './plugins';
 const app = createApp(App)
 setupRouter(app)
 app.use(setupPlugins)
+
+console.log(import.meta.env.VITE_APP_NAME)

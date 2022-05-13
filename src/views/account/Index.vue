@@ -1,6 +1,6 @@
 <template>
   <div class="account-index">
-    <van-button type="warning">This is account page</van-button>
+  <h1>Account Page</h1>
   </div>
 </template>
 

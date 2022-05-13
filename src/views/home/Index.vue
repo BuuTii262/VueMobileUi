@@ -1,7 +1,6 @@
 <template>
   <div class="home-index">
-    <h1>Hello</h1>
-    <van-button type="danger">Click</van-button>
+    <p>Home Page</p>
   </div>
 </template>
 
@@ -25,6 +24,6 @@ export default defineComponent({
 
 <style lang="scss">
 .home-index {
-  font-size: 12px;
+  //font-size: 12px;
 }
 </style>
